@@ -56,4 +56,4 @@ Cuberto - Design inspiration
 GSAP - Animation library
 Unsplash - Beautiful stock photos
 RemixIcon - Icon library
-JS Libary - Sheri.JS
+JS Library - Sheri.JS
