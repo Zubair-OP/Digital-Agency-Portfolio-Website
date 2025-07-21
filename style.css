@@ -1,0 +1,575 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Matter Light', 'Roboto Flex', 'Matter', sans-serif;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ::selection {
+            color: #fff;
+            background-color: #000;
+        }
+
+        #main {
+            width: 100%;
+            background: #fff;
+        }
+
+        #nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            align-items: center;
+        }
+
+        #nav a {
+            text-decoration: none;
+            font-weight: 400;
+            color: black;
+            font-size: 1.1vw;
+            letter-spacing: -1px;
+        }
+
+        #nav #right {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        #nav img {
+            width: 100px;
+        }
+
+        #home {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        #mainhero {
+            padding: 10vw 17vw;
+            width: 100%;
+        }
+
+        #mainhero h1 {
+            font-weight: 300;
+            letter-spacing: -.1vw;
+            font-size: 1.34vw;
+        }
+
+        .headings {
+            display: flex;
+            gap: 40px;
+        }
+
+        #mainhero .headings h1 {
+            color: transparent;
+            -webkit-text-stroke: 1px #000;
+            font-size: 6vw;
+            font-weight: 500;
+            letter-spacing: -2px;
+            line-height: 1;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        #mainhero .headings h1:hover {
+            color: #000;
+        }
+
+        #homelast {
+            padding: 10vw 17vw;
+        }
+
+        #homelast p {
+            width: 70%;
+            font-size: 1.6vw;
+            letter-spacing: -.05px;
+            font-weight: 500;
+        }
+
+        #features {
+            padding: 10vw 17vw;
+        }
+
+        .headingF > h1 {
+            line-height: 1;
+            font-weight: 400;
+            font-size: 4vw;
+        }
+
+        .headingF > h1:nth-child(2) {
+            color: transparent;
+            -webkit-text-stroke: .3px #000;
+        }
+
+        .fimages {
+            margin-top: 5vw;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #fleft {
+            overflow: hidden;
+            width: 45%;
+            height: inherit;
+        }
+
+        #fright {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 45%;
+            height: inherit;
+        }
+
+        #fright .images {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #fright .images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        #fright .images img.active {
+            opacity: 1;
+        }
+
+        .leftelem {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: inherit;
+            padding: 2vw 0;
+            cursor: pointer;
+        }
+
+        .leftelem h2 {
+            font-size: 2vw;
+            line-height: 1;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 1.5vw 0;
+        }
+
+        .leftelem h3 {
+            font-weight: 400;
+            font-size: 1.3vw;
+        }
+
+        .leftelem h4 {
+            opacity: 0.5;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5vw;
+        }
+
+        .btn button {
+            padding: 1vw 2vw;
+            color: #000;
+            border-radius: 100px;
+            border: 1px solid #a9a6a6;
+            background-color: #fff;
+            font-weight: 500;
+            letter-spacing: -.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dev {
+            padding: 3vw 17vw;
+        }
+
+        .dev h1 {
+            font-size: 3.8vw;
+            width: 60%;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .dev p {
+            width: 60%;
+            line-height: 1.2;
+            font-size: 1.5vw;
+            letter-spacing: -.5px;
+            margin-top: 3vw;
+        }
+
+        #slides {
+            padding: 3vw 5vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .slide {
+            width: 30%;
+        }
+
+        .slide .img {
+            height: 200px;
+            width: 100%;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slide .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slide .tag {
+            background: #dadada;
+            width: fit-content;
+            margin: 20px 0;
+            padding: 10px 22px;
+            border-radius: 100px;
+            font-size: 0.8vw;
+        }
+
+        .slide h3 {
+            font-size: 1.4vw;
+            font-weight: 400;
+            letter-spacing: -.5px;
+        }
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            #nav {
+                padding: 20px 30px;
+            }
+            
+            #nav a {
+                font-size: 16px;
+            }
+            
+            #nav img {
+                width: 80px;
+            }
+            
+            #mainhero {
+                padding: 8vw 10vw;
+            }
+            
+            #mainhero h1 {
+                font-size: 18px;
+            }
+            
+            #mainhero .headings h1 {
+                font-size: 8vw;
+            }
+            
+            #homelast {
+                padding: 8vw 10vw;
+            }
+            
+            #homelast p {
+                width: 90%;
+                font-size: 20px;
+            }
+            
+            #features {
+                padding: 8vw 10vw;
+            }
+            
+            .headingF > h1 {
+                font-size: 8vw;
+            }
+            
+            .fimages {
+                height: 80vh;
+            }
+            
+            .leftelem h2 {
+                font-size: 28px;
+            }
+            
+            .leftelem h3 {
+                font-size: 20px;
+            }
+            
+            .dev {
+                padding: 8vw 10vw;
+            }
+            
+            .dev h1 {
+                font-size: 48px;
+                width: 80%;
+            }
+            
+            .dev p {
+                width: 80%;
+                font-size: 20px;
+            }
+            
+            #slides {
+                padding: 8vw 3vw;
+                gap: 30px;
+            }
+            
+            .slide .tag {
+                font-size: 12px;
+            }
+            
+            .slide h3 {
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            #nav {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+            }
+            
+            #nav a {
+                font-size: 14px;
+            }
+            
+            #nav img {
+                width: 70px;
+            }
+            
+            #nav #right {
+                gap: 20px;
+            }
+            
+            #mainhero {
+                padding: 15vw 8vw;
+            }
+            
+            #mainhero h1 {
+                font-size: 16px;
+            }
+            
+            .headings {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            #mainhero .headings h1 {
+                font-size: 12vw;
+            }
+            
+            #homelast {
+                padding: 8vw;
+            }
+            
+            #homelast p {
+                width: 100%;
+                font-size: 16px;
+            }
+            
+            #features {
+                padding: 8vw;
+            }
+            
+            .headingF > h1 {
+                font-size: 10vw;
+            }
+            
+            .fimages {
+                flex-direction: column;
+                height: auto;
+                gap: 30px;
+            }
+            
+            #fleft {
+                width: 100%;
+                height: auto;
+                order: 2;
+            }
+            
+            #fright {
+                width: 100%;
+                height: 300px;
+                order: 1;
+                justify-content: center;
+            }
+            
+            #fright .images {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .leftelem {
+                height: auto;
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .leftelem:last-child {
+                border-bottom: none;
+            }
+            
+            .leftelem h2 {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+            
+            .leftelem h3 {
+                font-size: 16px;
+            }
+            
+            .leftelem h4 {
+                font-size: 14px;
+            }
+            
+            .btn {
+                margin-top: 30px;
+            }
+            
+            .btn button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+            
+            .dev {
+                padding: 8vw;
+            }
+            
+            .dev h1 {
+                font-size: 28px;
+                width: 100%;
+            }
+            
+            .dev p {
+                width: 100%;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            
+            #slides {
+                flex-direction: column;
+                gap: 30px;
+                padding: 8vw;
+            }
+            
+            .slide {
+                width: 100%;
+            }
+            
+            .slide .img {
+                height: 180px;
+            }
+            
+            .slide .tag {
+                font-size: 12px;
+                margin: 15px 0;
+                padding: 8px 16px;
+            }
+            
+            .slide h3 {
+                font-size: 16px;
+            }
+        }
+
+        /* Small Mobile View */
+        @media (max-width: 480px) {
+            #nav {
+                padding: 10px 15px;
+            }
+            
+            #nav a {
+                font-size: 12px;
+            }
+            
+            #nav img {
+                width: 60px;
+            }
+            
+            #nav #right {
+                gap: 15px;
+            }
+            
+            #mainhero {
+                padding: 20vw 6vw;
+            }
+            
+            #mainhero h1 {
+                font-size: 14px;
+            }
+            
+            #mainhero .headings h1 {
+                font-size: 15vw;
+            }
+            
+            #homelast {
+                padding: 6vw;
+            }
+            
+            #homelast p {
+                font-size: 14px;
+            }
+            
+            #features {
+                padding: 6vw;
+            }
+            
+            .headingF > h1 {
+                font-size: 12vw;
+            }
+            
+            #fright {
+                height: 250px;
+            }
+            
+            .leftelem h2 {
+                font-size: 18px;
+            }
+            
+            .leftelem h3 {
+                font-size: 14px;
+            }
+            
+            .leftelem h4 {
+                font-size: 12px;
+            }
+            
+            .dev h1 {
+                font-size: 24px;
+            }
+            
+            .dev p {
+                font-size: 14px;
+            }
+            
+            .slide .img {
+                height: 150px;
+            }
+            
+            .slide h3 {
+                font-size: 14px;
+            }
+        }
